@@ -8,7 +8,7 @@
 ### Vuejs自定义过滤器filter
 
     // Define a custom filter called "searchFor".
-
+```javascript
     Vue.filter('searchFor', function (value, searchString) {
 
         // The first parameter to this function is the data that is to be filtered.
@@ -32,3 +32,4 @@
 
         return result;
     })
+```

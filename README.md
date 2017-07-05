@@ -1,35 +1,30 @@
-# five-example-of-vuejs
+## **five-example-of-vuejs**
 
+#### Vuejs自定义过滤器filter
 
-## Vuejs-of-Search
-
-
-
-### Vuejs自定义过滤器filter
+```javascript
+Vue.filter('searchFor', function (value, searchString) {
 
     // Define a custom filter called "searchFor".
-```javascript
-    Vue.filter('searchFor', function (value, searchString) {
+    // The first parameter to this function is the data that is to be filtered.
+    // The second is the string we will be searching for.
 
-        // The first parameter to this function is the data that is to be filtered.
-        // The second is the string we will be searching for.
+    var result = [];
 
-        var result = [];
+    if(!searchString){
+        return value;
+    }
 
-        if(!searchString){
-            return value;
+    searchString = searchString.trim().toLowerCase();
+
+    result = value.filter(function(item){
+        if(item.title.toLowerCase().indexOf(searchString) !== -1){
+            return item;
         }
-
-        searchString = searchString.trim().toLowerCase();
-
-        result = value.filter(function(item){
-            if(item.title.toLowerCase().indexOf(searchString) !== -1){
-                return item;
-            }
-        })
-
-        // Return an array with the filtered data.
-
-        return result;
     })
+
+    // Return an array with the filtered data.
+
+    return result;
+})
 ```

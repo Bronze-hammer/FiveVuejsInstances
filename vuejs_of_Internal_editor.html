@@ -19,18 +19,19 @@
             <div class="tooltip" v-on:click.stop v-if="show_tooltip">
 
                 <!-- v-model binds the contents of the text field with the "text_content" model.
-                 Any changes to the text field will automatically update the value, and
-                 all other bindings on the page that depend on it.  -->
+                     Any changes to the text field will automatically update the value, and
+                     all other bindings on the page that depend on it.  -->
 
                 <input type="text" v-model="text_content" />
             </div>
 
-            <!-- When the paragraph is clicked, call the "toggleTooltip" method and stop event propagation. -->
+                <!-- When the paragraph is clicked, call the "toggleTooltip" method and stop event propagation.
+                     .stop -> event.stopPropagation()  -->
 
-            <!-- The mustache expression will be replaced with the value of "text_content".
-                 It will automatically update to reflect any changes to that variable. -->
+                <!-- The mustache expression will be replaced with the value of "text_content".
+                     It will automatically update to reflect any changes to that variable. -->
 
-            <p v-on:click.stop="toggleTooltip">{{text_content}}</p>
+                <p v-on:click.stop="toggleTooltip">{{text_content}}</p>
 
         </div>
 

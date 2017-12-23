@@ -14,7 +14,10 @@
             <!-- To stops the page from jumping when a link is clicked
             we use the "prevent" modifier (short for preventDefault). -->
 
-            <!-- v-bind  主要用于属性绑定,以动态地切换class -->
+            <!-- 
+                v-bind  主要用于属性绑定,以动态地切换class 
+                v-on:click.prevent 阻止点击事件跳转
+            -->
             <nav v-bind:class="active" v-on:click.prevent>
 
                 <!-- When a link in the menu is clicked, we call the makeActive method,

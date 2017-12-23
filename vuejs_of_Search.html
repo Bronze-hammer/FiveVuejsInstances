@@ -11,7 +11,11 @@
 
     </head>
     <body>
-
+        <!--
+            v-cloak
+            取消数据绑定时出现的代码闪烁，如果没有v-cloak，
+            vuejs在解析{{i.title}}前，用户会看到"{{i.title}}"这个字符串
+        -->
         <form id="main" v-cloak>
 
             <div class="bar">

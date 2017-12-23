@@ -1,6 +1,19 @@
 ## **five-example-of-vuejs**
 
-#### Vuejs自定义过滤器filter
+### vuejs_of_Internal_editor
+
+![vuejs_of_Internal_editor](images/vuejs_of_Internal_editor.gif)
+
+### vuejs_of_Navigation
+
+![vuejs_of_Navigation](images/vuejs_of_Navigation.gif)
+
+### vuejs_of_Search
+
+![vuejs_of_Search](images/vuejs_of_Search.gif)
+
+
+##### Vuejs自定义过滤器filter
 
 ```javascript
 Vue.filter('searchFor', function (value, searchString) {
@@ -28,3 +41,12 @@ Vue.filter('searchFor', function (value, searchString) {
     return result;
 })
 ```
+
+### vuejs_of_Submit_From
+
+![vuejs_of_Submit_From](images/vuejs_of_Submit_From.gif)
+
+
+### vuejs_of_Transform_layout
+
+![vuejs_of_Transform_layout](images/vuejs_of_Transform_layout.gif)
